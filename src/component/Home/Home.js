@@ -9,20 +9,21 @@ import './Home.css';
 const Home = () => {
     return (
         <div>
-            <Header></Header>
-            
-            <div  id="Home">
+           <div id="nav-bar">
+                <Header></Header>
+           </div>
+            <div className="section-height" id="Home">
                 <HomeBody ></HomeBody>
             </div>
             
-            <section id="Projects">
+            <div className="section-height" id="Projects">
                 <Projects ></Projects>
+            </div>
+            <section className="section-height" id="Blogs">
+                <Blog ></Blog>
             </section>
-            <section id="Blogs">
-            <Blog ></Blog>
-            </section>
-            <section id="Contact">
-            <Contact ></Contact>
+            <section className="section-height" id="Contact">
+              <Contact ></Contact>
             </section>
         </div>
             

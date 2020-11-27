@@ -4,6 +4,12 @@ import volunteer from '../../images/volunteer.png';
 import travel from '../../images/travel.png';
 import ProjectDetails from '../ProjectDetails/ProjectDetails';
 import Header from '../Home/Header/Header';
+import { Button } from 'bootstrap';
+import Card from 'react-bootstrap/Card';
+import './Projects.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faGithub} from '@fortawesome/free-brands-svg-icons';
+import { faExternalLinkAlt} from '@fortawesome/free-solid-svg-icons';
 
 
 const projects=[
@@ -35,17 +41,35 @@ const projects=[
 
 const Projects = () => {
     return (
-        <div>
-        
-        <div className="d-flex justify-content-center">
-          
-        <div className="row m-5 pt-5">
-            {
-               projects.map(project => <ProjectDetails key ={project.id} project={project}></ProjectDetails>)
-            }
+        <div className="container my-5 projects">
+            <div className="row">
+                {
+                    projects.map(project => 
+                        <div className="col-md-4">
+                        
+                        <Card style={{ height: '30rem' }} >
+                            <Card.Img variant="top" src={project.img} style={{ height: '200px' }} />
+                            <Card.Body>
+                                <Card.Title>{project.name}</Card.Title>
+                                <Card.Text>
+                                {project.details}
+                                </Card.Text>
+                                <Card.Footer>
+                                <a href={project.github} target="_brand"><FontAwesomeIcon icon={faGithub} size="3x"/></a>
+                                <a href={project.LiveLink} target="_brand"><FontAwesomeIcon icon={faExternalLinkAlt} size="3x"/></a>
+                            
+                                </Card.Footer>
+                            
+                            </Card.Body>
+                        </Card>
+                        </div>
+                    )
+
+                } 
+            </div>
         </div>
-    </div>
-    </div>
+    
+
     );
 };
 

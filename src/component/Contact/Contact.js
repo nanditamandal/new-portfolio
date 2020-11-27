@@ -29,9 +29,9 @@ const Contact = () => {
 
 
     return (
-        <div className="contact container">
+        <div className="container my-5 contact">
                 
-                <div onClick={()=>{handelOffFrom()}}>
+                <div >
                         <img src={img} alt="nandita"/>
                         
                         <h3>Nandita Mandal</h3>
@@ -57,6 +57,8 @@ const Contact = () => {
 
             <div id="form" className="form">
             <form  onSubmit={handleSubmit(onSubmit)}>
+                 <Button onClick={()=>{handelOffFrom()}} variant="outline-success" style={{float: "right"}}>&#10005;</Button>
+                
                  <div className="form-group">
                       <input  name="name" className="form-control"   placeholder="Your name" ref={register({ required: true })}/>
                   </div>
