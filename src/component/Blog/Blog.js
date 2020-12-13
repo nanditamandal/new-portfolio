@@ -30,7 +30,8 @@ const blogs=[
 const Blog = () => {
     return (
         <div className="container my-5 projects">
-            <div className="row">
+            <h2 style={{text: "center"}}> Blogs </h2>
+            <div className="row pt-5">
                 {
                     blogs.map(blog => 
                         <div className="col-md-4">

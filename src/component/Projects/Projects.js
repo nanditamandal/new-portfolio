@@ -42,7 +42,9 @@ const projects=[
 const Projects = () => {
     return (
         <div className="container my-5 projects">
-            <div className="row">
+            <h2 style={{text: "center"}}>Projects</h2>
+         
+            <div className="row pt-5">
                 {
                     projects.map(project => 
                         <div className="col-md-4">
