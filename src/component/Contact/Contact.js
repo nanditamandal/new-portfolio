@@ -7,13 +7,13 @@ import { faGithub, faFacebook , faLinkedin} from '@fortawesome/free-brands-svg-i
 import './Contact.css';
 import Header from '../Home/Header/Header';
 import Button from 'react-bootstrap/Button';
-import file from '../../images/Nandita_Mandal_Resume.pdf';
+import file from '../../images/Resume_of_Nandita_Mandal.pdf';
 
 const Contact = () => {
     const { register, handleSubmit, watch, errors } = useForm();
     const onSubmit = data => console.log(data);
     const handelShowForm=()=>{
-        console.log("clicked")
+      
         document.getElementById("form").style.display = "block";
     
 
@@ -35,7 +35,8 @@ const Contact = () => {
                         <img src={img} alt="nandita"/>
                         
                         <h3>Nandita Mandal</h3>
-                        <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, ad. </p>
+                        <p> <strong>Contact : </strong>+8801995390973 </p>
+                        <p> <strong>Address : </strong>Uttara, Dhaka, Bangladesh </p>
                         <a href="https://github.com/nanditamandal/" target="_brand"><FontAwesomeIcon icon={faGithub} size="3x"/></a>
                         
                         <a href="https://www.facebook.com/profile.php?id=100008187674445" target="_brand"><FontAwesomeIcon icon={faFacebook} size="3x"/></a>
@@ -48,7 +49,7 @@ const Contact = () => {
                 </div>
                 <div className="mt-5">
                 <Button variant="outline-success" onClick={()=>{handelShowForm()}} >Send Massage</Button>{' '}
-                <a href={file} download="Nandita_Mandal_Resume.pdf">
+                <a href={file} download="Resume_of_Nandita_Mandal.pdf">
                 <Button variant="danger">Download Resume</Button> 
                 </a>
                

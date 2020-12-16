@@ -20,7 +20,7 @@ const Header = () => {
             </Nav>
             <Form inline>
               <Button variant="outline-success">
-              <a href="https://drive.google.com/file/d/1SKPtRZH-LAxhCUD_dSV-vZYMkoYyDo1U/view?usp=sharing" target='_blank'><span>Resume</span></a>
+              <a href="https://drive.google.com/file/d/1nhLG0J5zrpsX-odku7K02txRNFwi9ia4/view?usp=sharing" target='_blank'><span>Resume</span></a>
             
               </Button>
             </Form>
